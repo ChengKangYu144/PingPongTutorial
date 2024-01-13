@@ -24,6 +24,18 @@
     <ClCompile Include="src\ui\Button.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\ui\Maininterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\Gameinterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Globals.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Defines.h">
@@ -33,6 +45,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="inc\ui\Button.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\ui\Interface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\ui\Application.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\Globals.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
