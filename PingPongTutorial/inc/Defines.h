@@ -57,4 +57,6 @@ struct Vector
 	}
 };
 
+using Coordinate = Vector;
+
 #endif
