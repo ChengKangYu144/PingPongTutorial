@@ -11,7 +11,7 @@ int APIENTRY WinMain(
     initgraph(640, 480);
     BeginBatchDraw();
     
-    Coordinate mouse;
+    MouseMessage* mouse;
     while (true)
     {
         PeekInputMessage();
@@ -19,10 +19,10 @@ int APIENTRY WinMain(
         {
             break;
         }
-        mouse = GetMouseCoordinate();
+        mouse = GetMouseMessage();
 
         cleardevice();
-        circle((int)mouse.x, (int)mouse.y, 10);
+        circle((int)mouse->x, (int)mouse->y, 10);
         FlushBatchDraw();
 
         Sleep(15);
