@@ -5,7 +5,7 @@
 
 #include <easyx.h>
 #include <string>
-#include "..\inc\Defines.h"
+#include "../Defines.h"
 
 enum ButtonState
 {
@@ -19,11 +19,13 @@ class Button
 {
 private:
 	Rect _range;
+
+	ButtonState _state;
 	COLORREF _color[BUTTON_STATE_NUM];
 	std::wstring _text;
 
-	std::is_function<void(void)> _onClick;
-	//void (*_onClick)(void);
+	//std::is_function<void(void)> _onClick;
+	void (*_onClick)(void);
 
 public:
 	Button(const Rect& range, const std::wstring& text);

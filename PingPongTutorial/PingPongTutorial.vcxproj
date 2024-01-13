@@ -21,9 +21,10 @@
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Message.cpp" />
+    <ClCompile Include="src\ui\Button.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\Button.h" />
+    <ClInclude Include="inc\ui\Button.h" />
     <ClInclude Include="inc\Defines.h" />
     <ClInclude Include="inc\Message.h" />
   </ItemGroup>

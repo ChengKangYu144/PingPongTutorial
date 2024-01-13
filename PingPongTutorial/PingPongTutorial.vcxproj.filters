@@ -21,6 +21,9 @@
     <ClCompile Include="src\Message.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\ui\Button.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Defines.h">
@@ -29,7 +32,7 @@
     <ClInclude Include="inc\Message.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="inc\Button.h">
+    <ClInclude Include="inc\ui\Button.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
