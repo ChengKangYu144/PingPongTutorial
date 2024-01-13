@@ -80,7 +80,7 @@ struct Rectangle
 
 	bool Contains(const Coordinate& coord) const
 	{
-		return ((x < coord.x && coord.x < x < x + width) && (y < coord.y && coord.y < y + height));
+		return ((x < coord.x && coord.x < x + width) && (y < coord.y && coord.y < y + height));
 	}
 };
 #endif
