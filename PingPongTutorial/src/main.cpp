@@ -9,6 +9,7 @@ int APIENTRY WinMain(
     _In_ int nShowCmd)
 {
     initgraph(640, 480);
+    BeginBatchDraw();
     
     Coordinate mouse;
     while (true)
@@ -20,9 +21,14 @@ int APIENTRY WinMain(
         }
         mouse = GetMouseCoordinate();
 
+        cleardevice();
         circle((int)mouse.x, (int)mouse.y, 10);
+        FlushBatchDraw();
+
+        Sleep(15);
     }
  
+    EndBatchDraw();
     closegraph();
     return 0;
 }
