@@ -14,5 +14,5 @@ int APIENTRY WinMain(
     Sleep(5000);            // 延时 5000 毫秒（声明在 Windows.h 中）
 
     closegraph();           // 关闭绘图窗口
-    return 0;
+    return 0;//
 }
