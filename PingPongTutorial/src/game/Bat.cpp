@@ -1,5 +1,6 @@
 #include "../../inc/game/Bat.h"
 #include "../../inc/Globals.h"
+#include "../../inc/utils/Image.h"
 
 Bat::Bat(double minY, double maxY)
 	: _minY(minY), _maxY(maxY)
@@ -34,8 +35,5 @@ void Bat::MoveDown(double deltaY)
 
 void Bat::Draw()
 {
-	RECT rect = GetBorder().ToEasyXRect();
-
-	setfillcolor(WHITE);
-	fillrectangle(rect.left, rect.top, rect.right, rect.bottom);
+	PutAlphaImage((int)_pos.x, (int)_pos.y, &batImage);
 }

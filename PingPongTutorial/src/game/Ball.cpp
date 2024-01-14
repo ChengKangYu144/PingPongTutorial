@@ -1,6 +1,7 @@
 #include "../../inc/game/Ball.h"
 #include "../../inc/utils/Random.h"
 #include "../../inc/Globals.h"
+#include "../../inc/utils/Image.h"
 #include <cmath>
 
 Ball::Ball(double speed) : _speed(speed)
@@ -85,8 +86,5 @@ void Ball::Attach(const Rect& rect, bool isLeft)
 
 void Ball::Draw()
 {
-	RECT rect = GetBorder().ToEasyXRect();
-
-	setfillcolor(YELLOW);
-	fillrectangle(rect.left, rect.top, rect.right, rect.bottom);
+	PutAlphaImage((int)_pos.x, (int)_pos.y, &ballImage);
 }

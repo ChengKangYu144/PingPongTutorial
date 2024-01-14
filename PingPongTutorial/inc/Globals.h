@@ -15,4 +15,7 @@ const int DOUBLE_PLAYER = 1;
 
 extern int gameMode;
 
+extern IMAGE batImage;
+extern IMAGE ballImage;
+
 #endif

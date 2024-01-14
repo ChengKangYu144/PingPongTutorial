@@ -4,6 +4,7 @@
 #include "../inc/Globals.h"
 #include "../inc/ui/Application.h"
 #include "../inc/ui/Interface.h"
+#include "../inc/utils/Image.h"
 #include "../inc/utils/Random.h"
 
 void Init();
@@ -49,6 +50,11 @@ void Init()
     initgraph(1000, 560);
     setbkcolor(WHITE);
     settextcolor(BLACK);
+
+    // load image resource
+    LoadImageResource(&batImage, L"res/Image.png", 0, 0, 20, 100);
+    LoadImageResource(&ballImage, L"res/Image.png", 20, 0, 10, 10);
+
     
     Application* app = GetApplication();
     app->RegisterInterface(new MainInterface())
