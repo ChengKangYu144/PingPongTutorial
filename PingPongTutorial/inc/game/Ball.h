@@ -16,6 +16,7 @@ public:
 	Ball(double speed);
 
 	void Serve(double direction);
+	void Stop();
 	void Move();
 
 	void Bounce(const Rect& rect);

@@ -1,10 +1,22 @@
 #include "../../inc/game/Ball.h"
+#include "../../inc/utils/Random.h"
+#include <cmath>
 
 Ball::Ball(double speed) : _speed(speed) {}
 
 void Ball::Serve(double direction)
 {
-	_velocity.x = _speed * direction;
+	const double PI = 3.1415926;
+	double radian = Random(-60, 60) * PI / 180.0;
+	direction = direction / std::abs(direction);
+
+	_velocity.x = _speed * std::cos(radian) * direction;
+	_velocity.y = _speed * std::sin(radian);
+}
+
+void Ball::Stop()
+{
+	_velocity.x = _velocity.y = 0.0;
 }
 
 void Ball::Move()
@@ -59,4 +71,5 @@ void Ball::Attach(const Rect& rect, bool isLeft)
 	{
 		_pos.x += rect.width * 0.5;
 	}
+	Stop();
 }
