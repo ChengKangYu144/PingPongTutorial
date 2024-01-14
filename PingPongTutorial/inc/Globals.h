@@ -4,6 +4,7 @@
 #define _GLOBALS_H_
 
 #include <easyx.h>
+#include "Sound.h"
 
 class Application;
 Application* GetApplication();
@@ -15,7 +16,11 @@ const int DOUBLE_PLAYER = 1;
 
 extern int gameMode;
 
+// image resource
 extern IMAGE batImage;
 extern IMAGE ballImage;
 
+// sound resource
+extern FmodSound bounceSound;
+extern FmodSound scoreSound;
 #endif

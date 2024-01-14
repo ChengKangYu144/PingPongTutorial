@@ -5,6 +5,7 @@
 #include "../inc/ui/Application.h"
 #include "../inc/ui/Interface.h"
 #include "../inc/utils/Image.h"
+#include "../inc/Sound.h"
 #include "../inc/utils/Random.h"
 
 void Init();
@@ -29,7 +30,7 @@ int APIENTRY WinMain(
         
         // update game
         app->Update();
-
+        UpdateFmodSystem();
 
         //draw
         app->Draw();
@@ -55,6 +56,9 @@ void Init()
     LoadImageResource(&batImage, L"res/Image.png", 0, 0, 20, 100);
     LoadImageResource(&ballImage, L"res/Image.png", 20, 0, 10, 10);
 
+    // load sound resource
+    LoadFmodSound(&bounceSound, "res/bounce.wav");
+    LoadFmodSound(&scoreSound, "res/score.wav");
     
     Application* app = GetApplication();
     app->RegisterInterface(new MainInterface())
@@ -65,6 +69,8 @@ void Init()
 
 void ClearUp()
 {
+    CloseFmodSystem();
+    
     EndBatchDraw();
     closegraph();
 }

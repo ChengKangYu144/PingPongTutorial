@@ -27,6 +27,7 @@
     <ClCompile Include="src\Globals.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Message.cpp" />
+    <ClCompile Include="src\Sound.cpp" />
     <ClCompile Include="src\ui\Application.cpp" />
     <ClCompile Include="src\ui\Button.cpp" />
     <ClCompile Include="src\ui\Gameinterface.cpp" />
@@ -40,6 +41,7 @@
     <ClInclude Include="inc\game\BatController.h" />
     <ClInclude Include="inc\game\GameObject.h" />
     <ClInclude Include="inc\Globals.h" />
+    <ClInclude Include="inc\Sound.h" />
     <ClInclude Include="inc\ui\Application.h" />
     <ClInclude Include="inc\ui\Button.h" />
     <ClInclude Include="inc\Defines.h" />
