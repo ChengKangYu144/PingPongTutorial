@@ -5,7 +5,7 @@
 
 void SetRandomSeed()
 {
-	srand((unsigned)time(nullptr));
+	srand(static_cast<unsigned>(time(nullptr)));
 }
 
 //get random number in [0.0, 1.0]

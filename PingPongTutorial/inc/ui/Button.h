@@ -22,6 +22,7 @@ private:
 
 	ButtonState _state;
 	COLORREF _color[BUTTON_STATE_NUM];
+
 	std::wstring _text;
 
 	//std::is_function<void(void)> _onClick;
@@ -29,6 +30,7 @@ private:
 
 public:
 	Button(const Rect& range, const std::wstring& text);
+	virtual ~Button() = default;
 
 	Button* SetUpStyle(COLORREF color);
 	Button* SetHoverStyle(COLORREF color);

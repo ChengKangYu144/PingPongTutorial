@@ -22,12 +22,12 @@ public:
 	virtual ~BatController() {}
 
 	const std::wstring& Name() const { return _name; }
-	virtual void Update() = 0;
-	
 	virtual const wchar_t* GetTips() const
 	{
 		return L"None";
 	}
+
+	virtual void Update() = 0;
 };
 
 class PlayerBatController final : public BatController

@@ -95,6 +95,12 @@ void GameInterface::Update()
         }
     }
 
+    if (newTurn)
+    {
+        _turn = Random(0, 2);
+        _started = false;
+        //PlayFmodSound(&scoreSound);
+    }
 }
 
 void GameInterface::Draw()

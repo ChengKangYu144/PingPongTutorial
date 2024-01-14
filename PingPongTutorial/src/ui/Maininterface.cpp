@@ -19,21 +19,21 @@ MainInterface::MainInterface() : Interface(L"Main")
 
 MainInterface::~MainInterface()
 {
-	if (_pOnePlayerButton)
-	{
-		delete _pOnePlayerButton;
-	}
-	if (_pTwoPlayerButton)
-	{
-		delete _pTwoPlayerButton;
-	}
-	if (_pExitButton)
-	{
-		delete _pExitButton;
-	}
-	//delete _pOnePlayerButton;
-	//delete _pTwoPlayerButton;
-	//delete _pExitButton;
+	//if (_pOnePlayerButton)
+	//{
+	//	delete _pOnePlayerButton;
+	//}
+	//if (_pTwoPlayerButton)
+	//{
+	//	delete _pTwoPlayerButton;
+	//}
+	//if (_pExitButton)
+	//{
+	//	delete _pExitButton;
+	//}
+	delete _pOnePlayerButton;
+	delete _pTwoPlayerButton;
+	delete _pExitButton;
 }
 
 void MainInterface::Update()

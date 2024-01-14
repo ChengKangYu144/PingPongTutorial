@@ -20,11 +20,11 @@ public:
 
 	Application* RegisterInterface(Interface* intf);
 
-	// Set to target interface immediately, without onExit
-	void ChangeInterface(const std::wstring& name);
-
 	// Set to target interface after current update
 	void SetInterface(const std::wstring& name);
+	
+	// Set to target interface immediately, without onExit
+	void ChangeInterface(const std::wstring& name);
 
 	void Update();
 	void Draw();

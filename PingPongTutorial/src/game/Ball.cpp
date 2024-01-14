@@ -64,6 +64,7 @@ void Ball::Bounce(const Rect& rect)
 	}
 	_pos = _pos + overlap;
 
+	//PlayFmodSound(&bounceSound, true);
 }
 
 void Ball::Attach(const Rect& rect, bool isLeft)
@@ -84,7 +85,7 @@ void Ball::Attach(const Rect& rect, bool isLeft)
 
 void Ball::Draw()
 {
-	RECT rect = GetBorder().ToEasyXRECT();
+	RECT rect = GetBorder().ToEasyXRect();
 
 	setfillcolor(YELLOW);
 	fillrectangle(rect.left, rect.top, rect.right, rect.bottom);

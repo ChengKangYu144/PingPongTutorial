@@ -12,7 +12,7 @@ Button::Button(const Rect& range, const std::wstring& text)
 
 Button* Button::SetUpStyle(COLORREF color)
 {
-	_color[BUTTON_DOWN] = color;
+	_color[BUTTON_UP] = color;
 	return this;
 }
 
@@ -76,7 +76,7 @@ void Button::Draw()
 	setlinestyle(PS_SOLID, 3);
 	setlinecolor(_color[_state]);
 
-	RECT rect = _range.ToEasyXRECT();
+	RECT rect = _range.ToEasyXRect();
 
 	rectangle(rect.left, rect.top, rect.right, rect.bottom);
 	drawtext(_text.c_str(), &rect, DT_CENTER | DT_VCENTER | DT_SINGLELINE);

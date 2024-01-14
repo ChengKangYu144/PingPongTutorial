@@ -11,6 +11,7 @@ struct Vector
 	double y;
 
 	Vector() : x(0.0), y(0.0) {}
+
 	Vector(double _x, double _y) : x(_x), y(_y) {}
 
 	bool operator==(const Vector& obj) const
@@ -67,12 +68,18 @@ struct Rect
 	union
 	{
 		Coordinate pos;
-		struct { double x; double y; };
+		struct
+		{ 
+			double x; 
+			double y; 
+		};
 	};
+
 	double width;
 	double height;
 
-	Rect() : x(0.0), y(0.0), width(0), height(0) {}
+	Rect() : x(0.0), y(0.0), width(0.0), height(0.0) {}
+
 	Rect(double _x, double _y, double _width, double _height)
 		: x(_x), y(_y), width(_width), height(_height) {}
 
@@ -108,7 +115,7 @@ struct Rect
 		return ((x < coord.x && coord.x < x + width) && (y < coord.y && coord.y < y + height));
 	}
 
-	RECT ToEasyXRECT() const
+	RECT ToEasyXRect() const
 	{
 		return {
 			static_cast<LONG>(x), static_cast<LONG>(y), static_cast<LONG>(x + width), static_cast<LONG>(y + height)

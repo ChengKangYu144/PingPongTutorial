@@ -34,7 +34,7 @@ void Bat::MoveDown(double deltaY)
 
 void Bat::Draw()
 {
-	RECT rect = GetBorder().ToEasyXRECT();
+	RECT rect = GetBorder().ToEasyXRect();
 
 	setfillcolor(WHITE);
 	fillrectangle(rect.left, rect.top, rect.right, rect.bottom);

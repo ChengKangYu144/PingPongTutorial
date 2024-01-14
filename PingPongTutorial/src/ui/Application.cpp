@@ -23,7 +23,7 @@ Application* Application::RegisterInterface(Interface* intf)
 }
 
 // Set to target interface immediately, without onExit
-void Application::ChangeInterface(const std::wstring& name)
+void Application::SetInterface(const std::wstring& name)
 {
 	auto it = _interfaces.find(name);
 	if (it == _interfaces.end())
@@ -35,7 +35,7 @@ void Application::ChangeInterface(const std::wstring& name)
 }
 
 // Set to target interface after current update
-void Application::SetInterface(const std::wstring& name)
+void Application::ChangeInterface(const std::wstring& name)
 {
 	auto it = _interfaces.find(name);
 	if (it == _interfaces.end())
