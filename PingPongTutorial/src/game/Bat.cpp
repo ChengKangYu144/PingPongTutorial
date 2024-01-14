@@ -1,7 +1,12 @@
 #include "../../inc/game/Bat.h"
+#include "../../inc/Globals.h"
 
 Bat::Bat(double minY, double maxY)
-	: _minY(minY), _maxY(maxY) {}
+	: _minY(minY), _maxY(maxY)
+{
+	_width = 20;
+	_height = 100;
+}
 
 void Bat::MoveUp(double deltaY)
 {

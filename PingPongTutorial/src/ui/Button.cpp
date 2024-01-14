@@ -1,7 +1,8 @@
 #include "../../inc/ui/Button.h"
 #include "../../inc/Message.h"
 
-Button::Button(const Rect& range, const std::wstring& text) : _range(range), _text(text), _onClick(nullptr)
+Button::Button(const Rect& range, const std::wstring& text)
+	: _range(range), _text(text), _onClick(nullptr)
 {
 	for (int i = 0; i < BUTTON_STATE_NUM; i++)
 	{

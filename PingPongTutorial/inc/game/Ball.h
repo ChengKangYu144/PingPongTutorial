@@ -21,6 +21,8 @@ public:
 
 	void Bounce(const Rect& rect);
 	void Attach(const Rect& rect, bool isLeft);
+
+	void Draw();
 };
 
 #endif

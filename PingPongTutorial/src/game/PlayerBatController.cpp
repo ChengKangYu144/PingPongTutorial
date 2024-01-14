@@ -2,8 +2,8 @@
 #include "../../inc/Message.h"
 #include "../../inc/game/Bat.h"
 
-PlayerBatController::PlayerBatController(const std::wstring& name, Bat* bat, int downKey, int upKey, double speed)
-	: BatController(name, bat, speed), _downKey(downKey), _upKey(upKey),_speed(speed) {}
+PlayerBatController::PlayerBatController(const std::wstring& name, Bat* bat, double speed, int downKey, int upKey)
+	: BatController(name, bat, speed), _downKey(downKey), _upKey(upKey) {}
 
 void PlayerBatController::Update()
 {
@@ -22,7 +22,7 @@ void PlayerBatController::Update()
 	}
 }
 
-std::wstring PlayerBatController::GetTips() const
+const wchar_t* PlayerBatController::GetTips() const
 {
 	return L"Human Player";
 }

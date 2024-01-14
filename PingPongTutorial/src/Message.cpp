@@ -3,7 +3,7 @@
 
 static MouseMessage mouse;
 
-void PeekInputMessage()
+void PeekMouseMessage()
 {
 	ExMessage msg;
 

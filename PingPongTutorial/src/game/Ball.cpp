@@ -1,8 +1,13 @@
 #include "../../inc/game/Ball.h"
 #include "../../inc/utils/Random.h"
+#include "../../inc/Globals.h"
 #include <cmath>
 
-Ball::Ball(double speed) : _speed(speed) {}
+Ball::Ball(double speed) : _speed(speed)
+{
+	_width = 10;
+	_height = 10;
+}
 
 void Ball::Serve(double direction)
 {
@@ -52,17 +57,20 @@ void Ball::Bounce(const Rect& rect)
 		// bounce on x
 		if (ballCenter.x < rectCenter.x)
 		{
-			overlap.y = -overlap.y;
+			overlap.x = -overlap.x;
 		}
 		_velocity.x = -_velocity.x;
 		overlap.y = 0.0;
 	}
+	_pos = _pos + overlap;
 
 }
 
 void Ball::Attach(const Rect& rect, bool isLeft)
 {
 	Coordinate center = rect.GetCenter();
+	_pos = center;
+	_pos.y -= _height * 0.5;
 	if (isLeft)
 	{
 		_pos.x -= rect.width * 0.5 + _width;
@@ -72,4 +80,12 @@ void Ball::Attach(const Rect& rect, bool isLeft)
 		_pos.x += rect.width * 0.5;
 	}
 	Stop();
+}
+
+void Ball::Draw()
+{
+	RECT rect = GetBorder().ToEasyXRECT();
+
+	setfillcolor(YELLOW);
+	fillrectangle(rect.left, rect.top, rect.right, rect.bottom);
 }

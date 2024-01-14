@@ -3,6 +3,8 @@
 #include "../inc/Message.h"
 #include "../inc/Globals.h"
 #include "../inc/ui/Application.h"
+#include "../inc/ui/Interface.h"
+#include "../inc/utils/Random.h"
 
 void Init();
 
@@ -14,8 +16,6 @@ int APIENTRY WinMain(
 {
     // initialization
     Init();
-    initgraph(1000, 560);
-    BeginBatchDraw();
 
     Application* app = GetApplication();
     while (isRunning)
@@ -23,11 +23,7 @@ int APIENTRY WinMain(
         cleardevice();
 
         // process input
-        PeekInputMessage();
-        if (IsKeyDown(VK_Q))
-        {
-            break;
-        }
+        PeekMouseMessage();
         
         // update game
         app->Update();

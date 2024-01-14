@@ -33,7 +33,32 @@ GameObject* GameObject::SetHeight(double height)
 	return this;
 }
 
+Coordinate GameObject::GetCoordinate() const
+{
+	return _pos;
+}
+
+double GameObject::GetX() const
+{
+	return _pos.x;
+}
+
+double GameObject::GetY() const
+{
+	return _pos.y;
+}
+
+double GameObject::GetWidth() const
+{
+	return _width;
+}
+
+double GameObject::GetHeight() const
+{
+	return _height;
+}
+
 Rect GameObject::GetBorder() const
 {
-	return Rect(_pos.x, _pos.y, _width, _height);
+	return { _pos.x, _pos.y, _width, _height };
 }

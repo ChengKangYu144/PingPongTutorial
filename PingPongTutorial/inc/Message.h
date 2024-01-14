@@ -24,7 +24,7 @@ struct MouseMessage
 	MouseMessage() {}
 };
 
-void PeekInputMessage();
+void PeekMouseMessage();
 
 bool IsKeyDown(int key);
 MouseMessage* GetMouseMessage();

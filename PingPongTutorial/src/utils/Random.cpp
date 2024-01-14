@@ -11,7 +11,7 @@ void SetRandomSeed()
 //get random number in [0.0, 1.0]
 double Random()
 {
-	return (double)rand() / (double)RAND_MAX;
+    return static_cast<double>(rand()) / static_cast<double>(RAND_MAX);
 }
 
 double Random(double upper)
@@ -22,4 +22,20 @@ double Random(double upper)
 double Random(double lower, double upper)
 {
 	return lower + (upper - lower) * Random();
+}
+
+// [0, upper)
+int Random(int upper)
+{
+    return rand() % upper;
+}
+
+// [lower, upper)
+int Random(int lower, int upper)
+{
+    if (upper <= lower)
+    {
+        return lower;
+    }
+    return lower + rand() % (upper - lower);
 }

@@ -1,4 +1,5 @@
 #include "../../inc/ui/Application.h"
+#include "../../inc/ui/Interface.h"
 
 Application::Application()
 	: _currentInterface(nullptr), _nextInterface(nullptr) {}
