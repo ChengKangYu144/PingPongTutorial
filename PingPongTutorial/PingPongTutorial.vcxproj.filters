@@ -36,6 +36,21 @@
     <ClCompile Include="src\Globals.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\GameObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\Ball.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\Bat.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\PlayerBatController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\AiBatController.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\Defines.h">
@@ -54,6 +69,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="inc\Globals.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\game\GameObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\game\Bat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\game\Ball.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\game\BatController.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

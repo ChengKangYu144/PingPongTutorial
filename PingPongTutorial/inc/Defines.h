@@ -80,6 +80,28 @@ struct Rect
 		return { x + width * 0.5, y + height * 0.5 };
 	}
 
+	Coordinate Intersect(const Rect& rect) const
+	{
+		Coordinate overlap;
+		if (this->x < rect.x)
+		{
+			overlap.x = this->x + this->width - rect.x;
+		}
+		else
+		{
+			overlap.x = rect.x + rect.width - this->x;
+		}
+		if (this->y < rect.y)
+		{
+			overlap.y = this->y + this->height - rect.y;
+		}
+		else
+		{
+			overlap.y = rect.y + rect.height - this->y;
+		}
+		return overlap;
+	}
+
 	bool Contains(const Coordinate& coord) const
 	{
 		return ((x < coord.x && coord.x < x + width) && (y < coord.y && coord.y < y + height));

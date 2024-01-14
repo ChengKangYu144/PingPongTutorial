@@ -58,6 +58,19 @@ void MainInterface::Draw()
 	_pExitButton->Draw();
 }
 
-void MainInterface::_OnClickOnePlayerButton() {}
-void MainInterface::_OnClickTwoPlayerButton() {}
-void MainInterface::_OnClicExitButton() {}
+void MainInterface::_OnClickOnePlayerButton()
+{
+	Application* app = GetApplication();
+	app->ChangeInterface(L"Game");
+}
+
+void MainInterface::_OnClickTwoPlayerButton()
+{
+	Application* app = GetApplication();
+	app->ChangeInterface(L"Game");
+}
+
+void MainInterface::_OnClicExitButton()
+{
+	isRunning = false;
+}
