@@ -16,10 +16,10 @@ struct FmodSound
 
     ~FmodSound()
     {
-        if (snd)
-        {
-            snd->release();
-        }
+        //if (snd)
+        //{
+        //    snd->release();
+        //}
     }
 };
 

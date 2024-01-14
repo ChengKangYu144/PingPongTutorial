@@ -48,9 +48,13 @@ void Init()
 {
     SetRandomSeed();
 
+    // init graph
     initgraph(1000, 560);
     setbkcolor(WHITE);
     settextcolor(BLACK);
+
+    // init sound
+    InitFmodSystem();
 
     // load image resource
     LoadImageResource(&batImage, L"res/Image.png", 0, 0, 20, 100);
@@ -59,7 +63,8 @@ void Init()
     // load sound resource
     LoadFmodSound(&bounceSound, "res/bounce.wav");
     LoadFmodSound(&scoreSound, "res/score.wav");
-    
+
+    //init application
     Application* app = GetApplication();
     app->RegisterInterface(new MainInterface())
         ->RegisterInterface(new GameInterface());

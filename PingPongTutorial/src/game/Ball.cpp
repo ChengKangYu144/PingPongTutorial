@@ -65,7 +65,7 @@ void Ball::Bounce(const Rect& rect)
 	}
 	_pos = _pos + overlap;
 
-	//PlayFmodSound(&bounceSound, true);
+	PlayFmodSound(&bounceSound, true);
 }
 
 void Ball::Attach(const Rect& rect, bool isLeft)
@@ -86,5 +86,5 @@ void Ball::Attach(const Rect& rect, bool isLeft)
 
 void Ball::Draw()
 {
-	PutAlphaImage((int)_pos.x, (int)_pos.y, &ballImage);
+	PutAlphaImage(static_cast<int>(_pos.x), static_cast<int>(_pos.y), &ballImage);
 }

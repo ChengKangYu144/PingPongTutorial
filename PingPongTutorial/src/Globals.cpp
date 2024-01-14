@@ -15,3 +15,6 @@ int gameMode = 0;
 
 IMAGE batImage;
 IMAGE ballImage;
+
+FmodSound bounceSound;
+FmodSound scoreSound;

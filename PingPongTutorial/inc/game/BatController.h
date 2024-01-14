@@ -57,6 +57,4 @@ public:
 	const wchar_t* GetTips() const override;
 };
 
-
-
 #endif
